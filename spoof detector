@@ -62,7 +62,7 @@ def get_mac(ip):
 while True:
     options = parser()
     flag=0
-
+    #only indicate potential attack if at least 2 indicators go off 
     if(flag1(options.src)):
         flag+=1
     if(flag2()):
