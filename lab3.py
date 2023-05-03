@@ -44,24 +44,6 @@ def flag3(gip):
         return True
     return False
 
-#----------DIDN'T END UP IMPLEMENTING. FINISH LATER-------------
-# def flag4():
-#     dict = {}
-#     #using wireshark, moniter for a machine sending arp replies without requests
-#     capture = pyshark.LiveCapture(interface='eth0', display_filter='arp')
-#     for packet in capture.sniff_continuously():
-#         if packet.arp.opCode == '1':
-#             if packet.arp.src_proto_ipv4 in dict:  
-#                 dict[packet.arp.src_proto_ipv4] += 1
-#             else:
-#                 dict[packet.arp.src_proto_ipv4] = 1
-
-    #make a dictionary for each arp with op code == 1, store add to its dest ip add key in dict a tally
-    #for every arp op code == 2 and sender ip add matches in dict, subtract tally
-    #if there is an op code 2 ip with a tally of more than 4 then risk of spoofing
-    
-    return
-
 def makeArpTable():
     #print("start time stamp" ,time.time())
     filterlist = ['?', 'eth0', '[ether]', 'on', 'at', 'home.home']
